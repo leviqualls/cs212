@@ -1,0 +1,241 @@
+html {
+    scroll-behavior: smooth;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        'nav main';
+    gap:10px;
+    background-color:rgb(221, 221, 197);
+}
+.header {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color: beige;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    z-index: 1000;
+    grid-area: header;
+}
+.nav {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background-color:beige;
+    grid-area: nav;
+}
+.main {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color:beige;
+}
+.footer {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    background-color:beige;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    z-index: 1000;
+}
+
+.summary {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+}
+.skills {
+    display: grid;
+    gap: 15px;
+    text-align: center;
+    padding: 10px;
+}
+.skills h3:first-of-type, .images, ul {
+    grid-column: span 3;
+    justify-items: center;
+    padding: 0;
+}
+.skillsitem {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+.skillsitem:hover {
+    transform: scale(1.1);
+    background-color:rgb(226, 226, 202);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.projects {
+    display: grid;
+    gap: 20px;
+    text-align: center;
+    padding: 10px;
+    justify-items: center;
+}
+.projects h3:first-of-type, p, h4 {
+    grid-column: span 3;
+}
+.projectgallery {
+    grid-column: span 3;
+}
+.eduexp {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+}
+.resume:hover {
+    background-color:gainsboro;
+}
+.contacts {
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+}
+.images {
+    float: left;
+    margin-right: 20px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+.images:hover {
+    transform: scale(102%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: small;
+    }
+    .nav {
+        height: 480px;
+        font-size: small;
+    }
+    .main {
+        height: 480px;
+        font-size: small;
+        table, th, td {
+            font-size: small;
+        }
+        img {
+            width: 200px;
+        }
+    }
+    .footer {
+        font-size: small;
+    }
+    .container {
+        padding-top:140px;
+        padding-bottom:185px;
+    }
+    html {
+    scroll-padding-top: 140px;
+    }
+}
+@media (max-width: 768px) and (min-width: 480px) {
+    .header {
+        font-size: smaller;
+    }
+    .nav {
+        height: 768px;
+        font-size: smaller;
+    }
+    .main {
+        height: 768px;
+        font-size: smaller;
+        table, th, td {
+            font-size: small;
+        }
+        img {
+            width: 250px;
+        }
+    }
+    .footer {
+        font-size: smaller;
+    }
+    .container {
+        padding-top:120px;
+        padding-bottom:160px;
+    }
+    html {
+        scroll-padding-top: 120px;
+    }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+    .header {
+        font-size: medium;
+    }
+    .nav {
+        height: 1024px;
+        font-size: medium;
+    }
+    .main {
+        height: 1024px;
+        font-size: medium;
+        table, th, td {
+            font-size: small;
+        }
+        img {
+            width: 300px;
+        }
+    }
+    .footer {
+        font-size: medium;
+    }
+    .container {
+        padding-top:150px;
+        padding-bottom:205px;
+    }
+    html {
+        scroll-padding-top: 150px;
+    }
+}
+@media (max-width: 1920px) and (min-width: 1024px) {
+    .header {
+        font-size: large;
+    }
+    .nav {
+        height: 1920px;
+        font-size: large;
+    }
+    .main {
+        height: 1920px;
+        font-size: large;
+        table, th, td {
+            font-size: medium;
+        }
+        img {
+            width: 400px;
+        }
+    }
+    .footer {
+        font-size: large;
+    }
+    .container {
+        padding-top:165px;
+        padding-bottom: 225px;
+    }
+    html {
+        scroll-padding-top: 165px;
+    }
+}
+
